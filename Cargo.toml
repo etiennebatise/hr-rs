@@ -1,0 +1,18 @@
+[package]
+name = "hr"
+version = "0.1.0"
+authors = ["Etienne Batise <etienne.batise@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+term_size = "0.3.2"
+
+[lib]
+name = "hr"
+path = "src/lib.rs"
+
+[[bin]]
+name = "hr"
+path = "src/main.rs"
