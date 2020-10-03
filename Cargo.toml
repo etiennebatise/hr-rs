@@ -3,6 +3,17 @@ name = "hr"
 version = "0.1.0"
 authors = ["Etienne Batise <etienne.batise@gmail.com>"]
 edition = "2018"
+description = 'Horizontal rule for your terminal'
+repository = 'http://github.com/etiennebatise/hr-rs'
+license = "MIT"
+
+exclude = [
+  ".gitignore",
+  ".gitlab-ci.yml",
+  ".travis.yml",
+  ".github",
+  "rustfmt.toml"
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

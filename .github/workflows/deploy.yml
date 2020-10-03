@@ -1,0 +1,24 @@
+name: Deployment
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install latest Rust stable toolchain
+      run: |
+        rustup update
+        rustup default stable
+    - name: Login on Crates.IO
+      env:
+        TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+      run: cargo login $TOKEN
+    - name: Upload
+      run: cargo publish
